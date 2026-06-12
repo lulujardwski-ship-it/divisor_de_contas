@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+    min-height:100vh;
+    color:white;
+    padding:30px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    opacity:.8;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.info-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+}
+
+.receita{
+    border-left:5px solid #22c55e;
+}
+
+.gastos{
+    border-left:5px solid #ef4444;
+}
+
+.saldo{
+    border-left:5px solid #3b82f6;
+}
+
+.info-card span{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:12px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.02);
+    background:#16a34a;
+}
+
+.barra{
+    width:100%;
+    height:20px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progresso{
+    height:100%;
+    width:0%;
+    background:linear-gradient(
+        90deg,
+        #22c55e,
+        #4ade80
+    );
+    transition:.5s;
+}
+
+#porcentagem{
+    margin-top:10px;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    background:rgba(255,255,255,.05);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.excluir{
+    background:#ef4444;
+    width:auto;
+    padding:8px 12px;
+}
+
+.excluir:hover{
+    background:#dc2626;
+}
+
+.saldo-positivo{
+    color:#22c55e;
+}
+
+.saldo-negativo{
+    color:#ef4444;
+}
+
+.alerta-financeiro{
+    transition:.3s;
+}
+
+.alerta-verde{
+    border-left:6px solid #22c55e;
+}
+
+.alerta-amarelo{
+    border-left:6px solid #f59e0b;
+}
+
+.alerta-vermelho{
+    border-left:6px solid #ef4444;
+}
+
+#subMensagemFinanceira{
+    margin-top:10px;
+    opacity:.9;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinControl</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>💰 FinControl</h1>
+    <p>Controle inteligente das suas finanças</p>
+</header>
+
+<div class="container">
+
+    <div class="dashboard">
+
+        <div class="info-card receita">
+            <h3>Receita</h3>
+            <span id="receitaCard">R$ 0,00</span>
+        </div>
+
+        <div class="info-card gastos">
+            <h3>Gastos</h3>
+            <span id="total">0,00</span>
+        </div>
+
+        <div class="info-card saldo">
+            <h3>Saldo</h3>
+            <span id="saldo">0,00</span>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Receita Mensal</h2>
+
+        <input
+            type="number"
+            id="receita"
+            placeholder="Digite sua receita mensal">
+
+    </div>
+
+    <div class="card">
+
+        <h2>Adicionar Despesa</h2>
+
+        <input
+            type="text"
+            id="nomeDespesa"
+            placeholder="Nome da despesa">
+
+        <input
+            type="number"
+            id="valorDespesa"
+            placeholder="Valor">
+
+        <select id="categoria">
+            <option>🍔 Alimentação</option>
+            <option>🚗 Transporte</option>
+            <option>🎮 Lazer</option>
+            <option>🏥 Saúde</option>
+            <option>📦 Outros</option>
+        </select>
+
+        <button onclick="adicionarDespesa()">
+            Adicionar Despesa
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Uso do Orçamento</h2>
+
+        <div class="barra">
+            <div id="progresso"></div>
+        </div>
+
+        <p id="porcentagem">
+            0% do orçamento utilizado
+        </p>
+
+    </div>
+
+    <div class="card alerta-financeiro">
+
+    <h2 id="mensagemFinanceira">
+        ✅ Suas finanças estão sob controle
+    </h2>
+
+    <p id="subMensagemFinanceira">
+        Continue mantendo seus gastos organizados.
+    </p>
+
+</div>
+
+<div class="card">
+
+    <h2>Relatório Mensal</h2>
+
+    <button onclick="gerarRelatorio()">
+        📄 Gerar Relatório
+    </button>
+
+</div>
+
+    <div class="card">
+
+        <h2>Despesas</h2>
+
+        <ul id="listaDespesas"></ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
